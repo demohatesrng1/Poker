@@ -4,32 +4,32 @@
 #include <unordered_map>
 using namespace std;
 
-vector<vector<pair<string,int>>> cards(){
+pair<string,int> cards(){
     // Black Spade
-    vector<pair<string, int>> spades;
+    pair<string, int> spades;
     for (int i = 1; i<=13; i++){
-        spades.push_back(make_pair("Spade", i));
+        make_pair("spade", i);
     }
 
     // Black Club
-    vector<pair<string, int>> clubs;
+    pair<string, int> clubs;
     for( int i = 1; i<=13; i++){
-        clubs.push_back(make_pair("Club", i));
+        make_pair("clubs", i);;
     }
 
     // Red Diamond
-    vector<pair<string , int>> diamonds;
+    pair<string , int> diamonds;
     for(int i= 1; i<=13; i++){
-        diamonds.push_back(make_pair("Diamond", i));
+        make_pair("diamonds", i);
     }
 
     // Red heart
-    vector<pair<string, int>> hearts;
+    pair<string, int> hearts;
     for (int i=1; i<=13; i++){
-        hearts.push_back(make_pair("Heart", i));
+        make_pair("hearts", i);
     }
 
-    return {spades, clubs, diamonds, hearts};
+    return spades, clubs, diamonds, hearts;
 }
 
 vector<pair<string, int>> players(){
@@ -52,6 +52,126 @@ vector<pair<string, int>> players(){
     return player_id;
 }
 
-void logic(){
+void dealcards(pair<string,int> cards, int player_id){
+
+    for(int i = 1; i<=player_id; i++){
+        vector<pair<string, int>> card_1;
+        vector<pair<string, int>> card_2;
+
+    }
+}
+
+int betting(pair<string, int> players){
+
+    int n = players.size();
+    int bet_amount;
+
+    cout<<"how much do you want to bet ? "<<endl;
+    cin>> bet_amount;
+
+    for(int i = 2; i<=n; i++){
+        player_id.betting = rand();
+
+    }
+    return sum(betting);
+}
+
+void logic(pair<string,int> cards){
+    // win cases logic conditions
+        vector<pair<string, int>> RoyalFlush = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> StraightFlush = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> FourKind = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> FullHouse = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> Flush = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> Straight = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> ThreeKind = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> TwoPair = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> Pair = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+
+    vector<pair<string, int>> HighCard = {
+        {"spades", 1}, {"spades", 10}, {"spades", 11}, {"spades", 12}, {"spades", 13}
+    };
+    betting(players);
+    int total_table_bet = sum(player_id.bet);
+
+    for(int i = 0; i<=player_id; i++){
+        if (player_id[cards] + Flop + River == RoyalFlush){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+        }
+        else if (player_id[cards] + Flop + River == StraightFlush){
+            player_id_amount += total_table_bet;
+            total_table_bet--;
+
+        }
+        else if (player_id[cards] + Flop + River == FourKind){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == FullHouse){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == Flush){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == Straight){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == ThreeKind){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == TwoPair){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else if (player_id[cards] + Flop + River == Pair){
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+        else {
+            player_id_amount += total_table_bet;
+            total_table_bet = 0;
+
+        }
+
+    }
+
 
 }
